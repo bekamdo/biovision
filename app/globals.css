@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+@layer base {
+  /**
+   * Design system colors based on the admin dashboard
+   * Using HSL format for consistency with Tailwind CSS
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 25 20% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 25 20% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 20% 17%;
+    --primary: 123 48% 33%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 25 20% 17%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 25 20% 17%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 123 48% 33%;
+    --radius: 0.5rem; /* Defined here for borderRadius */
+
+    /* Custom dashboard colors */
+    --dashboard-text: 25 20% 17%;
+    --dashboard-text-light: 25 10% 45%;
+    --dashboard-users-bg: 44 100% 97%;
+    --dashboard-outlets-bg: 24 100% 93%;
+    --dashboard-products-bg: 203 100% 94%;
+    --dashboard-activity-bg: 123 48% 85%;
+    --dashboard-green: 123 48% 33%;
+    --dashboard-green-light: 123 48% 50%;
+    --dashboard-success: 123 48% 45%;
+
+    /* BioVision specific colors */
+    --biovision-dark: 25 20% 17%;
+    --biovision-dark-alt: 25 15% 18%;
+    --biovision-cream: 42 89% 96%;
+    --biovision-green: 123 48% 33%;
+    --biovision-gold: 44 85% 46%;
+    --biovision-text-light: 42 89% 96%;
+
+    /* Shadcn sidebar colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* New Design-specific colors (converted to HSL) */
+    --green-primary: 123 48% 33%; /* #2E7D32 */
+    --text-primary: 25 20% 17%; /* #2C2A29 */
+    --text-secondary: 25 20% 17% / 0.4; /* rgba(44, 42, 41, 0.40) */
+    --surface-light: 220 13% 97%; /* #F5F6F8 */
+    --line-light: 220 13% 94%; /* #EDEEF3 */
+    --line-border: 220 13% 92%; /* #E6E7EC */
+    --black-text: 0 0% 7.5%; /* #131313 */
+    --orange-tag: 40 100% 72%; /* #FFCD71 */
+    --red-logout: 0 80% 38%; /* #B01212 */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 123 48% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 123 48% 40%;
+
+    --dashboard-text: 210 40% 98%;
+    --dashboard-text-light: 215 20.2% 65.1%;
+    --dashboard-users-bg: 44 50% 15%;
+    --dashboard-outlets-bg: 24 50% 15%;
+    --dashboard-products-bg: 203 50% 15%;
+    --dashboard-activity-bg: 123 48% 15%;
+    --dashboard-green: 123 48% 40%;
+    --dashboard-green-light: 123 48% 50%;
+    --dashboard-success: 123 48% 45%;
+
+    /* BioVision specific colors */
+    --biovision-dark: 25 20% 17%;
+    --biovision-dark-alt: 25 15% 18%;
+    --biovision-cream: 42 89% 96%;
+    --biovision-green: 123 48% 33%;
+    --biovision-gold: 44 85% 46%;
+    --biovision-text-light: 42 89% 96%;
+
+    /* Shadcn sidebar colors */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* New Design-specific colors (converted to HSL) */
+    --green-primary: 123 48% 40%; /* Darker green for dark mode */
+    --text-primary: 210 40% 98%; /* Lighter text for dark mode */
+    --text-secondary: 215 20.2% 65.1%; /* Lighter muted text for dark mode */
+    --surface-light: 217.2 32.6% 17.5%; /* Darker surface for dark mode */
+    --line-light: 217.2 32.6% 17.5%; /* Darker line for dark mode */
+    --line-border: 217.2 32.6% 17.5%; /* Darker line for dark mode */
+    --black-text: 210 40% 98%; /* White text for dark mode */
+    --orange-tag: 40 100% 60%; /* Slightly darker orange for dark mode */
+    --red-logout: 0 62.8% 30.6%; /* Darker red for dark mode */
+  }
+}
+
+/*
+ * Tailwind CSS v4 @theme inline directive
+ * All theme extensions (colors, borderRadius, keyframes, animations, container, font families)
+ * are defined here, replacing tailwind.config.ts.
+ */
+@theme inline {
+  /* Container configuration */
+  --container-center: true;
+  --container-padding: 2rem;
+  --container-screens-2xl: 1400px;
+
+  /* Font Families */
+  --font-helvetica: "Helvetica Neue", -apple-system, "Roboto", "Helvetica", sans-serif;
+  --font-inter: var(--font-inter), -apple-system, "Roboto", "Helvetica", sans-serif; /* Uses next/font variable */
+
+  /* Colors */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-biovision-dark: hsl(var(--biovision-dark));
+  --color-biovision-dark-alt: hsl(var(--biovision-dark-alt));
+  --color-biovision-cream: hsl(var(--biovision-cream));
+  --color-biovision-green: hsl(var(--biovision-green));
+  --color-biovision-gold: hsl(var(--biovision-gold));
+  --color-biovision-text-light: hsl(var(--biovision-text-light));
+
+  --color-dashboard-text: hsl(var(--dashboard-text));
+  --color-dashboard-text-light: hsl(var(--dashboard-text-light));
+  --color-dashboard-users-bg: hsl(var(--dashboard-users-bg));
+  --color-dashboard-outlets-bg: hsl(var(--dashboard-outlets-bg));
+  --color-dashboard-products-bg: hsl(var(--dashboard-products-bg));
+  --color-dashboard-activity-bg: hsl(var(--dashboard-activity-bg));
+  --color-dashboard-green: hsl(var(--dashboard-green));
+  --color-dashboard-green-light: hsl(var(--dashboard-green-light));
+  --color-dashboard-success: hsl(var(--dashboard-success));
+
+  /* New Design-specific colors */
+  --color-green-primary: hsl(var(--green-primary));
+  --color-text-primary: hsl(var(--text-primary));
+  --color-text-secondary: hsl(var(--text-secondary));
+  --color-surface-light: hsl(var(--surface-light));
+  --color-line-light: hsl(var(--line-light));
+  --color-line-border: hsl(var(--line-border));
+  --color-black-text: hsl(var(--black-text));
+  --color-orange-tag: hsl(var(--orange-tag));
+  --color-red-logout: hsl(var(--red-logout));
+
+  /* Border Radius */
+  --border-radius-lg: var(--radius);
+  --border-radius-md: calc(var(--radius) - 2px);
+  --border-radius-sm: calc(var(--radius) - 4px);
+
+  /* Keyframes */
+  @keyframes accordion-down {
+    from {
+      height: "0";
+    }
+    to {
+      height: "var(--radix-accordion-content-height)";
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: "var(--radix-accordion-content-height)";
+    }
+    to {
+      height: "0";
+    }
+  }
+
+  /* Animations */
+  --animation-accordion-down: accordion-down 0.2s ease-out;
+  --animation-accordion-up: accordion-up 0.2s ease-out;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Use the font-inter variable from next/font, then fallbacks */
+    font-family: var(--font-inter), var(--font-helvetica), system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
