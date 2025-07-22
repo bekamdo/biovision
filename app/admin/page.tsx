@@ -28,13 +28,14 @@ export default function Index() {
         
 
         {/* Analytics Section */}
-        <div className="flex items-end self-stretch">
-          <div className="flex w-full items-center">
-            <div className="text-dashboard-text text-xl md:text-2xl font-bold leading-9">
+      <div className="flex flex-col sm:flex-row items-end sm:items-center sm:px-6 lg:px-8 w-full">
+        <div className="flex w-full items-center">
+           <div className="text-dashboard-text text-lg sm:text-xl md:text-2xl font-bold leading-snug sm:leading-9">
               Analytics
-            </div>
-          </div>
+           </div>
         </div>
+      </div>
+
         <ChartAndStoriesSection/>
 
         {/* Resource Management */}

@@ -9,3 +9,18 @@ export interface Product {
   originalPrice: number;
   image: string;
 }
+
+export interface AuditLogEntry {
+  serviceName: string;
+  ipAddress: string;
+  deviceModel: string;
+  entityAffected: string;
+  httpMethod: string;
+  role: string;
+  userAgent: string;
+  responseBody: string;
+  userName: string;
+  statusCode: string;
+  eventDescription: string;
+  operationSystem: string;
+}

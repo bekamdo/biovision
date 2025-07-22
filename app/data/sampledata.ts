@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import { AuditLogEntry, Product } from "@/types";
 
 
 export const mockProducts: Product[] = [
@@ -115,4 +115,189 @@ export const tags = [
     "Breackfast",
     "Fruit",
   ];
+
   
+export const auditData: AuditLogEntry[] = [
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  }
+];
+  
+export const userData = [
+    { name: "John Doe", role: "Admin" },
+    { name: "John Doe", role: "Moderator" },
+    { name: "John Doe", role: "Moderator" },
+    { name: "John Doe", role: "Moderator" },
+    { name: "John Doe", role: "Admin" },
+    { name: "John Doe", role: "Authenticated User" },
+  ];
+
+   export  const superAdminPermissions = [
+    { name: "Fundraiser", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Billings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Transactions", permissions: { View: true } },
+    { name: "Chama", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Tickets", permissions: { View: true, Create: false, Edit: false, Delete: false, Comment: false, Suspend: false } },
+    { name: "Users", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Audit Logs", permissions: { View: true, Export: false } },
+    { name: "Settings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+  ];
+
+    export const editorPermissions = [
+    { name: "Fundraiser", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Billings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Transactions", permissions: { View: true } },
+    { name: "Chama", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Tickets", permissions: { View: true, Create: false, Edit: false, Delete: false, Comment: false, Suspend: false } },
+    { name: "Users", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Audit Logs", permissions: { View: true, Export: false } },
+    { name: "Settings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+  ];
+
+    export const userPermissions = [
+    { name: "Fundraiser", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Billings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Transactions", permissions: { View: true } },
+    { name: "Chama", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Tickets", permissions: { View: true, Create: false, Edit: false, Delete: false, Comment: false, Suspend: false } },
+    { name: "Users", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+    { name: "Audit Logs", permissions: { View: true, Export: false } },
+    { name: "Settings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
+  ];

@@ -6,7 +6,7 @@ import RecentActivityCard from '../cards/RecentCard'
 const StatsCardSection = () => {
   return (
      <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center self-stretch gap-5">
-          <div className="flex w-full lg:w-[732px] flex-col items-start gap-5">
+          <div className="flex w-full  lg:w-[732px] flex-col items-start gap-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 self-stretch">
               <StatCard
                 title="Users"

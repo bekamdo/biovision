@@ -22,16 +22,16 @@ import {
 import Link from "next/link";
 
 const navigationItems = [
-  { name: "Dashboard", href: "/", icon: Grid3X3, isActive: true },
-  { name: "User Management", href: "/users", icon: User },
-  { name: "Content Management", href: "/content", icon: Menu },
-  { name: "Shop", href: "/shop", icon: ShoppingCart },
-  { name: "Outlet Management", href: "/outlets", icon: Store },
-  { name: "Survey Builder", href: "/surveys", icon: FileText },
-  { name: "Events", href: "/events", icon: Calendar },
-  { name: "Newsletter", href: "/newsletter", icon: Newspaper },
-  { name: "Settings", href: "/settings", icon: Settings },
-  { name: "Audit Logs & Security", href: "/audit", icon: Server },
+  { name: "Dashboard", href: "/admin", icon: Grid3X3, isActive: true },
+  { name: "User Management", href: "/admin/users", icon: User },
+  { name: "Content Management", href: "/admin/content", icon: Menu },
+  { name: "Shop", href: "/admin/shop", icon: ShoppingCart },
+  { name: "Outlet Management", href: "/admin/outlets", icon: Store },
+  { name: "Survey Builder", href: "/admin/surveys", icon: FileText },
+  { name: "Events", href: "/admin/events", icon: Calendar },
+  { name: "Newsletter", href: "/admin/newsletter", icon: Newspaper },
+  { name: "Settings", href: "/admin/settings", icon: Settings },
+  { name: "Audit Logs & Security", href: "/admin/audit", icon: Server },
 ];
 
 interface MobileSidebarProps {
