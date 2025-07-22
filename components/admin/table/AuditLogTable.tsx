@@ -1,5 +1,7 @@
+
 import { auditData } from "@/app/data/sampledata";
 import Pagination from "../shared/Pagination";
+
 
 export default function AuditLogTable() {
   return (
@@ -69,7 +71,7 @@ export default function AuditLogTable() {
           style={{ border: '1px solid rgba(44, 42, 41, 0.10)' }}
         >
           {/* Desktop Table View */}
-          <div className="overflow-x-auto">
+          <div className="hidden xl:block overflow-x-auto hide-scrollbar">
             {/* Table Header */}
             <div
               className="min-h-[46px] px-5 py-1 flex justify-between items-center min-w-[1197px]"
@@ -294,83 +296,125 @@ export default function AuditLogTable() {
             ))}
           </div>
 
-          {/* Mobile Card View */}
-          <div className="block lg:hidden">
+          {/* Tablet and Mobile Card View */}
+          <div className="block xl:hidden">
             {auditData.map((entry, index) => (
               <div
                 key={index}
-                className="p-4 border-b bg-white"
+                className="p-4 sm:p-6 border-b bg-white"
                 style={{ borderBottom: '1px solid rgba(44, 42, 41, 0.10)' }}
               >
-                <div className="grid grid-cols-2 gap-2 text-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 text-sm">
                   <div>
-                    <span 
-                      className="font-helvetica font-bold text-xs"
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
                       style={{ color: 'rgba(0, 0, 0, 0.74)' }}
                     >
                       Service:
                     </span>
-                    <span 
-                      className="font-helvetica font-bold text-xs ml-1"
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm ml-1"
                       style={{ color: 'rgba(0, 0, 0, 0.74)' }}
                     >
                       {entry.serviceName}
                     </span>
                   </div>
                   <div>
-                    <span 
-                      className="font-helvetica font-bold text-xs"
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
                       style={{ color: 'rgba(0, 0, 0, 0.74)' }}
                     >
                       Status:
                     </span>
-                    <span 
-                      className="font-helvetica font-bold text-xs ml-1"
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm ml-1"
                       style={{ color: '#2e7d32' }}
                     >
                       {entry.statusCode}
                     </span>
                   </div>
                   <div>
-                    <span 
-                      className="font-helvetica font-bold text-xs"
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
                       style={{ color: 'rgba(0, 0, 0, 0.74)' }}
                     >
                       Device:
                     </span>
-                    <span 
-                      className="font-helvetica font-medium text-xs ml-1"
+                    <span
+                      className="font-helvetica font-medium text-xs sm:text-sm ml-1"
                       style={{ color: 'rgba(0, 0, 0, 0.56)' }}
                     >
                       {entry.deviceModel}
                     </span>
                   </div>
                   <div>
-                    <span 
-                      className="font-helvetica font-bold text-xs"
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
                       style={{ color: 'rgba(0, 0, 0, 0.74)' }}
                     >
                       Method:
                     </span>
-                    <span 
-                      className="font-helvetica font-medium text-xs ml-1"
+                    <span
+                      className="font-helvetica font-medium text-xs sm:text-sm ml-1"
                       style={{ color: 'rgba(0, 0, 0, 0.56)' }}
                     >
                       {entry.httpMethod}
                     </span>
                   </div>
-                  <div className="col-span-2">
-                    <span 
-                      className="font-helvetica font-bold text-xs"
+                  <div>
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
                       style={{ color: 'rgba(0, 0, 0, 0.74)' }}
                     >
-                      IP:
+                      Entity:
                     </span>
-                    <span 
-                      className="font-helvetica font-medium text-xs ml-1"
+                    <span
+                      className="font-helvetica font-medium text-xs sm:text-sm ml-1"
+                      style={{ color: 'rgba(0, 0, 0, 0.56)' }}
+                    >
+                      {entry.entityAffected}
+                    </span>
+                  </div>
+                  <div>
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
+                      style={{ color: 'rgba(0, 0, 0, 0.74)' }}
+                    >
+                      Role:
+                    </span>
+                    <span
+                      className="font-helvetica font-medium text-xs sm:text-sm ml-1"
+                      style={{ color: 'rgba(0, 0, 0, 0.56)' }}
+                    >
+                      {entry.role}
+                    </span>
+                  </div>
+                  <div className="sm:col-span-2 lg:col-span-3">
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
+                      style={{ color: 'rgba(0, 0, 0, 0.74)' }}
+                    >
+                      IP Address:
+                    </span>
+                    <span
+                      className="font-helvetica font-medium text-xs sm:text-sm ml-1"
                       style={{ color: 'rgba(0, 0, 0, 0.56)' }}
                     >
                       {entry.ipAddress}
+                    </span>
+                  </div>
+                  <div className="sm:col-span-2 lg:col-span-3">
+                    <span
+                      className="font-helvetica font-bold text-xs sm:text-sm"
+                      style={{ color: 'rgba(0, 0, 0, 0.74)' }}
+                    >
+                      Event Description:
+                    </span>
+                    <span
+                      className="font-helvetica font-medium text-xs sm:text-sm ml-1"
+                      style={{ color: 'rgba(0, 0, 0, 0.56)' }}
+                    >
+                      {entry.eventDescription}
                     </span>
                   </div>
                 </div>

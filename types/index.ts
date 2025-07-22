@@ -24,3 +24,161 @@ export interface AuditLogEntry {
   eventDescription: string;
   operationSystem: string;
 }
+
+interface DataRow {
+  serviceName: string;
+  ipAddress: string;
+  deviceModel: string;
+  entityAffected: string;
+  httpMethod: string;
+  role: string;
+  userAgent: string;
+  responseBody: string;
+  userName: string;
+  statusCode: string;
+  eventDescription: string;
+  operationSystem: string;
+}
+
+export const sampleData: DataRow[] = [
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  },
+  {
+    serviceName: "John Doe",
+    ipAddress: "asjsbuwo832yr8",
+    deviceModel: "Macbook Pro",
+    entityAffected: "LOGIN",
+    httpMethod: "GET",
+    role: "User",
+    userAgent: "Other/0.00",
+    responseBody: "channel_parti",
+    userName: "John Doe",
+    statusCode: "200",
+    eventDescription: "Add Data",
+    operationSystem: "Windows"
+  }
+];

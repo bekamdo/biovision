@@ -116,8 +116,7 @@ export const tags = [
     "Fruit",
   ];
 
-  
-export const auditData: AuditLogEntry[] = [
+  export const auditData = [
   {
     serviceName: "John Doe",
     ipAddress: "asjsbuwo832yr8",
@@ -259,6 +258,10 @@ export const auditData: AuditLogEntry[] = [
     operationSystem: "Windows"
   }
 ];
+
+
+  
+
   
 export const userData = [
     { name: "John Doe", role: "Admin" },
@@ -301,3 +304,5 @@ export const userData = [
     { name: "Audit Logs", permissions: { View: true, Export: false } },
     { name: "Settings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
   ];
+
+  
