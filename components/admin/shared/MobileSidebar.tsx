@@ -25,7 +25,7 @@ const navigationItems = [
   { name: "Dashboard", href: "/admin", icon: Grid3X3, isActive: true },
   { name: "User Management", href: "/admin/users", icon: User },
   { name: "Content Management", href: "/admin/content", icon: Menu },
-  { name: "Shop", href: "/admin/shop", icon: ShoppingCart },
+  { name: "Shop", href: "/admin/products", icon: ShoppingCart },
   { name: "Outlet Management", href: "/admin/outlets", icon: Store },
   { name: "Survey Builder", href: "/admin/surveys", icon: FileText },
   { name: "Events", href: "/admin/events", icon: Calendar },

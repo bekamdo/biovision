@@ -154,8 +154,11 @@ export default function Index() {
          <TabSwitcherClient/>
 
 
-        {/* Table */}
-          <ResourceTable/>
+     <div className="min-h-screen container mx-auto bg-white py-8">
+      
+        <ResourceTable />
+     
+    </div>
       </div>
     </div>
   );

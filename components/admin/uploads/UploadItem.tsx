@@ -4,7 +4,7 @@ export const UploadItem: React.FC<{
   title: string;
   timeAgo: string;
 }> = ({ title, timeAgo }) => (
-  <div className="flex w-[303px] p-3 items-center gap-5 rounded-md border border-gray-300 bg-gray-50">
+  <div className="flex w-full p-3 items-center gap-5 rounded-md border border-gray-300 bg-gray-50">
     <div className="flex flex-col items-start gap-1.5 flex-1">
       <div className="self-stretch text-dashboard-text text-base font-normal leading-6">
         {title}

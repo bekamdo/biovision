@@ -5,7 +5,7 @@ export const PendingItem: React.FC<{
   timeAgo: string;
   category: string;
 }> = ({ title, timeAgo, category }) => (
-  <div className="flex w-[306px] p-2.5 items-center gap-7 rounded-md border border-gray-300 bg-gray-50">
+  <div className="flex w-full  p-3.5 items-center gap-7 rounded-md border border-gray-300 bg-gray-50">
     <div className="flex flex-col items-start gap-1.5 flex-1">
       <div className="text-dashboard-text text-base font-normal leading-6">
         {title}

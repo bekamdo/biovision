@@ -10,8 +10,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       
-    <SidebarShell>{children}</SidebarShell>
-    <Footer/>
+    <SidebarShell>
+      {children}
+    
+    </SidebarShell>
+     <Footer/>
+    
     </div>
   )
  

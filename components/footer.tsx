@@ -5,10 +5,10 @@ import { Twitter, Facebook, Instagram, PinIcon as Pinterest, LinkIcon, Phone, Ma
 
 export default function Footer() {
   return (
-    <footer className="bg-biovision-dark text-biovision-text-light">
+    <footer className="bg-biovision-dark  w-full text-biovision-text-light">
       {/* Main Footer Content */}
       <div className="px-4 pt-8 md:pt-16 lg:pt-20 pb-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="w-full mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Logo and Description Section */}
             <div className="md:col-span-2 lg:col-span-5 space-y-6">
