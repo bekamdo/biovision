@@ -1,4 +1,4 @@
-import { AuditLogEntry, Product } from "@/types";
+import { AuditLogEntry, Product, User } from "@/types";
 
 
 export const mockProducts: Product[] = [
@@ -115,6 +115,16 @@ export const tags = [
     "Breackfast",
     "Fruit",
   ];
+
+  export const users: User[] = [
+  { id: 1, name: "John Doe", role: "Admin", avatar: "https://api.builder.io/api/v1/image/assets/TEMP/ec8013246d0ea1088521ef8e1d26cdde0c0bad54?width=80" },
+  { id: 2, name: "John Doe", role: "Moderator", avatar: "https://api.builder.io/api/v1/image/assets/TEMP/ec8013246d0ea1088521ef8e1d26cdde0c0bad54?width=80" },
+  { id: 3, name: "John Doe", role: "Moderator", avatar: "https://api.builder.io/api/v1/image/assets/TEMP/ec8013246d0ea1088521ef8e1d26cdde0c0bad54?width=80" },
+  { id: 4, name: "John Doe", role: "Moderator", avatar: "https://api.builder.io/api/v1/image/assets/TEMP/ec8013246d0ea1088521ef8e1d26cdde0c0bad54?width=80" },
+  { id: 5, name: "John Doe", role: "Admin", avatar: "https://api.builder.io/api/v1/image/assets/TEMP/ec8013246d0ea1088521ef8e1d26cdde0c0bad54?width=80" },
+  { id: 6, name: "John Doe", role: "Authenticated User", avatar: "https://api.builder.io/api/v1/image/assets/TEMP/ec8013246d0ea1088521ef8e1d26cdde0c0bad54?width=80" },
+];
+
 
   export const auditData = [
   {

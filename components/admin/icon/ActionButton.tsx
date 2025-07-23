@@ -5,10 +5,10 @@ export const ActionButton = ({ children, variant = 'default', onClick }: {
 }) => {
   const baseClasses = "flex items-center justify-center p-[5px] rounded-md cursor-pointer";
   const variants = {
-    default: "bg-design-gray",
-    view: "bg-design-gray",
-    edit: "bg-design-green",
-    delete: "bg-design-red"
+    default: "bg-[#9CA3AF]",
+    view: "bg-[#9CA3AF]",
+    edit: "bg-dashboard-green",
+    delete: "bg-red-logout"
   };
   
   return (

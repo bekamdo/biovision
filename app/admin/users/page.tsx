@@ -37,7 +37,7 @@ export default function UserManagement() {
             className="text-design-gray-light font-inter text-sm bg-transparent border-none outline-none flex-1"
           />
         </div>
-        <button className="flex p-[11px] items-center rounded-[50px] bg-dashboard-green cursor-pointer hover:bg-design-green-light transition-colors">
+        <button className="flex p-[11px] items-center rounded-[50px] bg-dashb cursor-pointer hover:bg-design-green-light transition-colors">
           <FilterIcon />
         </button>
       </div>

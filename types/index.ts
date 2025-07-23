@@ -182,3 +182,10 @@ export const sampleData: DataRow[] = [
     operationSystem: "Windows"
   }
 ];
+
+export interface User {
+  id: number;
+  name: string;
+  role: string;
+  avatar: string;
+}
