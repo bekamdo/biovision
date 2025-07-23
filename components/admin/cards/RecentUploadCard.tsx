@@ -1,11 +1,11 @@
-import React from "react";
+import type React from "react"
 
 interface RecentUploadCardProps {
-  title: string;
-  subtitle: string;
-  buttonText: string;
-  backgroundColor?: string;
-  buttonColor?: string;
+  title: string
+  subtitle: string
+  buttonText: string
+  backgroundColor?: string
+  buttonColor?: string
 }
 
 const RecentUploadCard: React.FC<RecentUploadCardProps> = ({
@@ -24,9 +24,7 @@ const RecentUploadCard: React.FC<RecentUploadCardProps> = ({
           {title}
         </div>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-[10px]">
-          <div className="text-[#2C2A29] font-helvetica text-[14px] font-normal leading-normal">
-            {subtitle}
-          </div>
+          <div className="text-[#2C2A29] font-helvetica text-[14px] font-normal leading-normal">{subtitle}</div>
           <div
             className={`text-white text-center font-helvetica text-[14px] font-medium leading-normal flex h-[38px] px-4 py-[10px] justify-center items-center gap-[10px] rounded-[20px] ${buttonColor} whitespace-nowrap`}
           >
@@ -35,7 +33,7 @@ const RecentUploadCard: React.FC<RecentUploadCardProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RecentUploadCard;
+export default RecentUploadCard
