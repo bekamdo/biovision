@@ -7,6 +7,13 @@ interface StatCardProps {
   bgColor: string
 }
 
+export interface StatCardData {
+  title: string
+  value: string
+  change: string
+  bgColor: string
+}
+
 export const StatCard: React.FC<StatCardProps> = ({ title, value, change, bgColor }) => (
   <div
     className={`flex w-full min-w-[200px] h-[136px] p-[12px_12px_20px] flex-col justify-center items-start gap-[16px] rounded-[10px] border border-[#2C2A29]/10 ${bgColor} shadow-[1px_6px_10px_0px_rgba(0,0,0,0.04)]`}

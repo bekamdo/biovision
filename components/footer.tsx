@@ -4,148 +4,48 @@ import Link from "next/link"
 import { Twitter, Facebook, Instagram, PinIcon as Pinterest, LinkIcon, Phone, Mail, MapPin, Clock } from "lucide-react"
 
 export default function Footer() {
-  return (
-    <footer className="bg-biovision-dark  w-full text-biovision-text-light">
-      {/* Main Footer Content */}
-      <div className="px-4 pt-8 md:pt-16 lg:pt-20 pb-8">
-        <div className="w-full mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
-            {/* Logo and Description Section */}
-            <div className="md:col-span-2 lg:col-span-5 space-y-6">
-              {/* Logo */}
-              <div>
-                <img
-                  src="/placeholder.svg?height=176&width=247"
-                  alt="BioVision Africa Trust"
-                  className="w-full max-w-[247px] h-auto object-contain"
-                />
-              </div>
-              {/* Title */}
-              <h2 className="text-xl md:text-2xl font-bold leading-relaxed">
-                Growing Africa's Future Through Sustainable Agriculture
-              </h2>
-              {/* Description */}
-              <p className="text-base leading-relaxed opacity-90">
-                We partner with farmers across Africa to build sustainable food systems through agroecology, creating
-                premium products that support rural communities.
-              </p>
-              {/* Social Media Icons */}
-              <div className="flex items-center gap-6">
-                {[
-                  { platform: "twitter", icon: <Twitter className="w-4 h-4" /> },
-                  { platform: "facebook", icon: <Facebook className="w-4 h-4" /> },
-                  { platform: "pinterest", icon: <Pinterest className="w-4 h-4" /> },
-                  { platform: "instagram", icon: <Instagram className="w-4 h-4" /> },
-                ].map((social) => (
-                  <Link
-                    key={social.platform}
-                    href="#"
-                    className="w-10 h-10 bg-biovision-green rounded-full flex items-center justify-center hover:bg-opacity-80 transition-all duration-200"
-                    aria-label={social.platform}
-                  >
-                    {social.icon}
-                  </Link>
-                ))}
-              </div>
+  return (   
+        <footer className="bg-[#242320] px-4 sm:px-6 lg:px-[70px] py-6 lg:py-[38px] mt-8 lg:mt-[353px]">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0 mb-8 lg:mb-[70px]">
+            <div>
+              <img 
+                src="https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/6974c972f2e6fef51dfc76cba69b96e226fec58f?placeholderIfAbsent=true"
+                alt="BioVision Logo" 
+                className="w-20 sm:w-24 lg:w-[115px] h-auto"
+              />
             </div>
-            {/* Explore Section */}
-            <div className="md:col-span-1 lg:col-span-3 space-y-6">
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3">Explore</h3>
-                <div className="w-11 h-1 bg-biovision-green rounded-full mb-6"></div>
-              </div>
-              <nav className="space-y-3">
-                {[
-                  { label: "Our Mission", href: "/mission" },
-                  { label: "Sustainability Reports", href: "/sustainability" },
-                  { label: "Become a Partner", href: "/partner" },
-                  { label: "Press & Media", href: "/press" },
-                  { label: "Careers", href: "/careers" },
-                  { label: "FAQs", href: "/faqs" },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="flex items-center gap-3 text-base font-medium hover:text-biovision-green transition-colors duration-200 group"
-                  >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">
-                      <LinkIcon className="w-3 h-3" />
-                    </span>
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-            {/* Contact Section */}
-            <div className="md:col-span-1 lg:col-span-4 space-y-6">
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold mb-3">Contact</h3>
-                <div className="w-11 h-1 bg-biovision-green rounded-full mb-6"></div>
-              </div>
-              <div className="space-y-4">
-                {/* Phone */}
-                <div className="flex items-center gap-3">
-                  <Phone className="w-4 h-4 text-white" />
-                  <span className="text-base font-medium">+254 (0) 20 632 4806</span>
-                </div>
-                {/* Email */}
-                <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-white" />
-                  <span className="text-base font-medium">info@biovisionafricatrust.org</span>
-                </div>
-                {/* Address */}
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-white" />
-                  <span className="text-base font-medium leading-relaxed">
-                    Duduville Campus, Kasarani Nairobi, Kenya
-                  </span>
-                </div>
-                {/* PO Box */}
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-white" />
-                  <span className="text-base font-medium">P.O. Box 12345, Nairobi, Kenya</span>
-                </div>
-                {/* Hours */}
-                <div className="flex items-start gap-3">
-                  <Clock className="w-4 h-4 text-white" />
-                  <div className="text-base font-medium leading-relaxed">
-                    <div>Monday - Friday: 8:00 AM - 5:00 PM EAT</div>
-                    <div>Saturday: 9:00 AM - 1:00 PM EAT</div>
-                    <div>Sunday: Closed</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Bottom Bar */}
-      <div className="bg-biovision-dark-alt py-4 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-biovision-gold text-sm font-bold">
-              © 2025 BioVision Africa Trust. All Rights Reserved.
-            </div>
-            <div className="flex items-center gap-6 text-sm">
+            
+            <nav className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-[10px] text-[#fdfbf6] text-sm lg:text-[16px] font-medium lg:leading-[30px]">
               {[
-                { label: "Terms of Use", href: "/terms" },
-                { label: "Privacy Policy", href: "/privacy" },
-                { label: "Cookie Policy", href: "/cookies" },
-              ].map((link, index) => (
-                <div key={link.href} className="flex items-center">
-                  {index > 0 && <div className="w-px h-3.5 bg-biovision-gold mr-6"></div>}
-                  <Link
-                    href={link.href}
-                    className="text-biovision-gold hover:text-biovision-cream transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
+                { name: "Home", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/c314df1a435f731b18f454c9c004dc4a9b3db4ef?placeholderIfAbsent=true" },
+                { name: "Our Mission", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/1ad367e7d10d33adb32b7a5fe09baf606eff08c0?placeholderIfAbsent=true" },
+                { name: "Shop", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/3958355dab68a6e656a2dc2191089fc798472f05?placeholderIfAbsent=true" },
+                { name: "Resources", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/69961448b901131b7681adc47108c29a63e4e60a?placeholderIfAbsent=true" },
+                { name: "Outlets", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/ee424b43acc6b63d247f91ecf0eaf3d40dae02b4?placeholderIfAbsent=true" },
+                { name: "Surveys", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/d12c6773f916fed2520c4673f20e83de44fe7bc7?placeholderIfAbsent=true" },
+                { name: "Events", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/04e2789c79957317506e6356a743f1ae3ae986f2?placeholderIfAbsent=true" },
+                { name: "Contact Us", icon: "https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/668830dc027715859e73939bd335b86c81fd2127?placeholderIfAbsent=true" }
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-2 lg:gap-[10px] whitespace-nowrap">
+                  <img src={item.icon} alt="" className="w-2.5 h-2.5 lg:w-[11px] lg:h-auto" />
+                  <span className="text-xs sm:text-sm lg:text-[16px]">{item.name}</span>
                 </div>
               ))}
+            </nav>
+          </div>
+          
+          <div className="bg-[#2c2a29] min-h-16 lg:min-h-[70px] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-0 px-4 sm:px-6 lg:px-[33px] py-4 lg:py-[20px] -mx-4 sm:-mx-6 lg:-mx-[70px]">
+            <div className="text-xs sm:text-sm lg:text-[14px] font-bold text-[#d4a017] lg:leading-[30px]">
+              © 2025 BioVision Africa Trust. All Rights Reserved.
+            </div>
+            
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 lg:gap-[7px] text-xs sm:text-sm lg:text-[14px] font-normal text-[#d4a017] lg:leading-[1] text-left sm:text-right">
+              <div className="lg:pl-[33px]">Terms of Use</div>
+              <div className="border-l border-[#d4a017] pl-2 lg:pl-[12px]">Privacy Policy</div>
+              <div className="border-l border-[#d4a017] pl-2 lg:pl-[12px]">Cookie Policy</div>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
+        </footer>
+   
   )
 }

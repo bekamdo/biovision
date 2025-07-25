@@ -8,15 +8,15 @@ import { ReactNode } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      
+ 
+    <>
     <SidebarShell>
       {children}
+    </SidebarShell> 
+     <Footer/>
+     </>
     
-    </SidebarShell>
-     {/* <Footer/> */}
-    
-    </div>
+  
   )
  
   

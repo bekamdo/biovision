@@ -12,7 +12,7 @@ export function SidebarShell({ children }: { children: React.ReactNode }) {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1">
+      <div className="flex-1 flex-col">
         {/* Mobile Sidebar Toggle */}
         <SidebarToggle />
 
@@ -20,10 +20,10 @@ export function SidebarShell({ children }: { children: React.ReactNode }) {
         <MainNav />
 
         {/* Page content */}
-        <main className="w-full max-w-[1277px] mx-auto px-5 py-5 flex flex-col gap-5">
+        {/* <main className="w-full max-w-[1277px] mx-auto px-5 py-5 flex flex-col gap-5"> */}
           {children}
-        </main>
-   
+        {/* </main>
+    */}
       </div>
      
        

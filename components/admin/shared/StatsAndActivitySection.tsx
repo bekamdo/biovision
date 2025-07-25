@@ -1,9 +1,12 @@
 "use client"
 import { Plus, Search } from "lucide-react"
 import { useState } from "react" // Removed useEffect and useRef as modal handles its own state
-import Modal from "../modal/Modal"
+
 import { StatCard } from "../cards/StatCard"
 import RecentUploadCard from "../cards/RecentUploadCard"
+import AddProductModal from "../modal/AddProductModal "
+import CreateSurveyModal from "../modal/CreateSurveyModal"
+import NewsletterModal from "../modal/NewsletterModal"
 
 
 export interface StatCardData {
@@ -25,6 +28,7 @@ interface StatsAndActivitySectionProps {
   title: string
   statCardsData: StatCardData[]
   recentUploadCardData: RecentUploadCardData
+   onAddClick?: () => void 
 }
 
 export const StatsAndActivitySection = ({
@@ -44,7 +48,7 @@ export const StatsAndActivitySection = ({
   return (
     <>
       {/* Modal is now self-contained and handles its own overlay */}
-      <Modal
+      {/* <AddProductModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         titleModal={titleModal}
@@ -53,7 +57,8 @@ export const StatsAndActivitySection = ({
         toggleTag={toggleTag}
         setTitleModal={setTitleModal}
         setDescription={setDescription}
-      />
+      /> */}
+      <NewsletterModal  isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
 
       {/* Stats and Activity Section */}
       <div className="flex flex-col justify-center items-start gap-[20px] w-full">

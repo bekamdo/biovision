@@ -4,9 +4,10 @@ import Header from "@/components/admin/shared/Header";
 import StatsAndActivitySection from "@/components/admin/shared/StatsAndActivitySection";
 import { Plus, Search } from "lucide-react";
 import { useState } from "react";
-
+import { AddEventModal } from "@/components/admin/modal/AddEventModal";
 
 const EventsPage = () => {
+  
     
   const statCardsData = [
     {
@@ -90,12 +91,14 @@ const EventsPage = () => {
   }
   return (
     <>
+    <AddEventModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
      <div className="flex flex-col items-start gap-[20px] p-4 sm:p-[20px] bg-[#F8F9FA] min-h-screen w-full max-w-[1277px] mx-auto">
           <Header title="Events Management" description="Create and manage all events" />
          <StatsAndActivitySection
         title="All Events"
         statCardsData={statCardsData}
         recentUploadCardData={recentUploadCardData}
+        
       />
        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
   
