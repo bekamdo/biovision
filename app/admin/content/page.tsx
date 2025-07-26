@@ -1,150 +1,15 @@
 "use client"
 
-const sampleArticles = [
-  {
-    id: '1998498',
-    author: {
-      name: 'Kianna Kenter',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/e5cc5340fdde9bfe98fac3c9f22e6f29bdbe6ec7?placeholderIfAbsent=true'
-    },
-    title: 'Noida Bank Employee Booked For Illicitly Transferring..',
-    publishedOn: '03-Jan-2023 | 08:53am',
-    updatedOn: '03-Jan-2023 | 08:53am',
-    approvedBy: 'Kianna Kenter',
-    status: 'Published' as const
-  },
-  {
-    id: '1998499',
-    author: {
-      name: 'Phillip Ekstrom',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/584ac73e60b35fea67523021f6a16440a6858bec?placeholderIfAbsent=true'
-    },
-    title: 'Dunki Release LIVE Updates: SRK Fans Call Film...',
-    publishedOn: '06-Jan-2023 | 09:55am',
-    updatedOn: '06-Jan-2023 | 10:25am',
-    approvedBy: 'Phillip Ekstrom',
-    status: 'Unpublished' as const
-  },
-  {
-    id: '19984100',
-    author: {
-      name: 'Corey Bator',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/a30ad71b27a527e91e425a3af3e8475ce023cadb?placeholderIfAbsent=true'
-    },
-    title: 'There\'s A Message in The Suspension Spree...',
-    publishedOn: '06-Jan-2023 | 09:46am',
-    updatedOn: '06-Jan-2023 | 10:27am',
-    approvedBy: 'Corey Bator',
-    status: 'Published' as const
-  },
-  {
-    id: '19984101',
-    author: {
-      name: 'Omar Donin',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/ce469a0889df2f4b637681732991ef03b80b76cf?placeholderIfAbsent=true'
-    },
-    title: 'How 150 Meetings by Amit Shah and 3,200 Suggestions...',
-    publishedOn: '07-Jan-2023 | 08:53am',
-    updatedOn: '07-Jan-2023 | 08:53am',
-    approvedBy: 'Omar Donin',
-    status: 'Unpublished' as const
-  },
-  {
-    id: '19984102',
-    author: {
-      name: 'Jocelyn Rosser',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/181b181b191184d8d91860cb94df48f2a2d38e60?placeholderIfAbsent=true'
-    },
-    title: 'US Has Deepened Partnership with India\': Blinken at Year...',
-    publishedOn: '07-Jan-2023 | 08:53am',
-    updatedOn: '07-Jan-2023 | 08:53am',
-    approvedBy: 'Jocelyn Rosser',
-    status: 'Published' as const
-  },
-  {
-    id: '19984103',
-    author: {
-      name: 'Madelyn Gouse',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/aad5bf98efb6752462c4e196b87d6ea353692a20?placeholderIfAbsent=true'
-    },
-    title: 'Covid-19 LIVE: 2,669 Active Cases in India; 21 People...',
-    publishedOn: '08-Jan-2023 | 08:53am',
-    updatedOn: '08-Jan-2023 | 08:53am',
-    approvedBy: 'Madelyn Gouse',
-    status: 'Published' as const
-  },
-  {
-    id: '19984104',
-    author: {
-      name: 'Jaxson Carder',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/4729e1a763636638f627625b7d90508717766a42?placeholderIfAbsent=true'
-    },
-    title: 'No Paneer at Indian Wedding? Angry Guests Throw Chairs...',
-    publishedOn: '08-Jan-2023 | 08:53am',
-    updatedOn: '08-Jan-2023 | 08:53am',
-    approvedBy: 'Jaxson Carder',
-    status: 'Unpublished' as const
-  },
-  {
-    id: '19984105',
-    author: {
-      name: 'Giana Stanton',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/71dc0fcadd094407fa56495f1f110d8f64fd5392?placeholderIfAbsent=true'
-    },
-    title: 'Delhi CM Arvind Kejriwal Responds to ED, Calls Summons...',
-    publishedOn: '08-Jan-2023 | 08:53am',
-    updatedOn: '08-Jan-2023 | 08:53am',
-    approvedBy: 'Giana Stanton',
-    status: 'Unpublished' as const
-  },
-  {
-    id: '19984106',
-    author: {
-      name: 'Kaylynn Bator',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/a9e840af551bb61477f6df602265e09a2c4ca601?placeholderIfAbsent=true'
-    },
-    title: 'Disproportionate Assets Case: TN Minister Ponmudy, Wife...',
-    publishedOn: '09-Jan-2023 | 08:53am',
-    updatedOn: '09-Jan-2023 | 08:53am',
-    approvedBy: 'Kaylynn Bator',
-    status: 'Published' as const
-  },
-  {
-    id: '19984107',
-    author: {
-      name: 'Jocelyn Philips',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/71dc0fcadd094407fa56495f1f110d8f64fd5392?placeholderIfAbsent=true'
-    },
-    title: 'Why Is Kerala at the Forefront Whenever There\'s A Surge...',
-    publishedOn: '09-Jan-2023 | 08:53am',
-    updatedOn: '09-Jan-2023 | 08:53am',
-    approvedBy: 'Jocelyn Philips',
-    status: 'Published' as const
-  },
-  {
-    id: '19984108',
-    author: {
-      name: 'Ruben Curtis',
-      image: 'https://api.builder.io/api/v1/image/assets/c88595b038cb4ee6a726ac924480b160/d25cb2a7092e7fcc29a81ad403d2176e3365ac64?placeholderIfAbsent=true'
-    },
-    title: 'Tata Harrier and Safari Secure 5-Star Safety Rating...',
-    publishedOn: '10-Jan-2023 | 08:53am',
-    updatedOn: '11-Jan-2023 | 08:53am',
-    approvedBy: 'Ruben Curtis',
-    status: 'Published' as const
-  }
-];
-
+import { sampleArticles } from '@/app/data/sampledata';
+import Pagination from '@/components/admin/shared/Pagination';
 import { SearchHeader } from '@/components/admin/shared/SearchHeader';
 import StatsCardSection from '@/components/admin/shared/StatsCardSection';
 import { StatusColumn } from '@/components/admin/shared/StatusColumn';
 import TabSwitcherClient from '@/components/admin/shared/TabSwitcherClient';
 import ResponsiveArticleTable from '@/components/admin/table/ResponsiveArticleTable';
+import { CreateContentModal} from '@/components/admin/modal/CreateContentModal';
+import { Filter, PlusIcon, Search } from 'lucide-react';
 import React, { useState, useMemo } from 'react';
-
-
-
-
 
 interface Story {
   id: string;
@@ -154,10 +19,11 @@ interface Story {
   status: 'approved' | 'pending' | 'rejected';
 }
 
-const Index = () => {
-  const [searchValue, setSearchValue] = useState('');
-  const [timeFilter, setTimeFilter] = useState('This Week');
 
+export default function ContentPage() {
+    const [searchValue, setSearchValue] = useState('');
+  const [timeFilter, setTimeFilter] = useState('This Week');
+   const [isCreateContentModalOpen, setIsCreateContentModalOpen] = useState(false);
   // Sample data - in a real app this would come from an API
   const [stories] = useState<Story[]>([
     {
@@ -245,9 +111,7 @@ const Index = () => {
       status: 'rejected'
     }
   ]);
-
-
-  // Filter stories based on search
+   // Filter stories based on search
   const filteredStories = useMemo(() => {
     if (!searchValue.trim()) return stories;
     
@@ -273,28 +137,74 @@ const Index = () => {
     // For now, we'll just log it
   };
 
-
-}
-
-
-
-export default function ContentPage() {
   return (
     <div className="flex w-full flex-col items-start gap-5 p-4 md:p-6 lg:p-5 bg-[#F5F5F5] font-sans max-w-[1338px] mx-auto">
-        <section className="mb-8">
-          <h1 className="text-3xl font-bold text-[#2c2a29] mb-2">Welcome Back, Admin</h1>
-          <p className="text-[#666666]">Here's a snapshot of how the platform is performing.</p>
+       <section className="mb-8">
+          <h1 className="text-3xl font-bold text-[#2c2a29] mb-2">Content Management </h1>
+          <p className="text-[#666666]">Add,edit,schedule, and manage content </p>
         </section>
-
-      {/* Stats Cards */}
-      <div className="flex flex-col items-end gap-5 self-stretch">
-         <StatsCardSection/>
-        
-
-        {/* Tab Switcher */}
+        <StatsCardSection/>
+             {/* Tab Switcher */}
          <TabSwitcherClient/>
-          <ResponsiveArticleTable articles={sampleArticles} />
+      
+
+      <SearchHeader
+        searchValue={searchValue}
+        onSearchChange={setSearchValue}
+        timeFilter={timeFilter}
+        onTimeFilterChange={setTimeFilter}
+      /> 
+    
+      <div className="flex justify-between items-start w-full gap-6 lg:gap-8 xl:gap-[30px] md:flex-row max-md:flex-col max-md:gap-[25px]">
+        <StatusColumn
+          status="approved"
+          stories={groupedStories.approved}
+          onStoryAction={handleStoryAction}
+        />
+        
+        <StatusColumn
+          status="pending"
+          stories={groupedStories.pending}
+          onStoryAction={handleStoryAction}
+        />
+        
+        <StatusColumn
+          status="rejected"
+          stories={groupedStories.rejected}
+          onStoryAction={handleStoryAction}
+        />
       </div>
+    
+              {/* All Resources */}
+        <div className="flex flex-col md:flex-row  justify-between items-start md:items-end self-stretch gap-4">
+          <div className="flex items-center">
+            <div className="text-dashboard-text text-xl md:text-2xl font-medium leading-9">
+              All Resources
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto">
+            <div className="flex w-full sm:w-[300px] md:w-[355px] h-12 px-2.5 py-5 items-center gap-2.5 rounded-lg border border-gray-300 bg-white">
+              <Search className="w-6 h-6 flex-shrink-0 text-gray-400" />
+              <div className="text-gray-400 text-sm font-normal leading-normal">
+                Search...
+              </div>
+            </div>
+            <div onClick={() => setIsCreateContentModalOpen(true)} className="flex w-12 h-12 px-3 py-3 justify-center items-center rounded-[50px] bg-dashboard-green flex-shrink-0">
+              <PlusIcon className="w-5 h-5 flex-shrink-0 text-white cursor-pointer" />
+            </div>
+          </div>
+        </div>
+           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+               <ResponsiveArticleTable articles={sampleArticles} />
+            </div>
+
+        <Pagination/>
+        <CreateContentModal 
+  isOpen={isCreateContentModalOpen}
+  onClose={() => setIsCreateContentModalOpen(false)}
+/>
+    
+       
     </div>
   );
 }

@@ -315,6 +315,8 @@ export const userData = [
     { name: "Settings", permissions: { View: true, Create: false, Edit: false, Delete: false } },
   ];
 
+  
+
   export const sampleArticles = [
   {
     id: '1998498',
@@ -449,4 +451,7 @@ export const userData = [
     status: 'Published' as const
   }
 ];
+
+
+
 
