@@ -5,6 +5,7 @@ import StatsAndActivitySection from "@/components/admin/shared/StatsAndActivityS
 import { Plus, Search } from "lucide-react";
 import { useState } from "react";
 import { AddEventModal } from "@/components/admin/modal/AddEventModal";
+import Pagination from "@/components/admin/shared/Pagination";
 
 const EventsPage = () => {
   
@@ -311,6 +312,7 @@ const EventsPage = () => {
           </div>
         </div>
       </div>
+          <Pagination/>
     </div>
     
     </>

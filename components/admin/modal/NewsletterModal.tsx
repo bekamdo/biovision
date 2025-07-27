@@ -2,14 +2,20 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
+import { RichTextEditor } from "../contentModalComp/RichTextEditor";
 
 interface NewsletterModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
+interface PostData {
+  richContent: string;
+
+}
 
 export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
+    const [postData, setPostData] = useState<PostData>({richContent: ''});
 
   const [formData, setFormData] = useState({
     title: '',
@@ -52,6 +58,10 @@ export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProp
     console.log("Newsletter data:", formData);
     onClose();
   };
+    const handleRichContentChange = (richContent: string) => {
+    setPostData(prev => ({ ...prev, richContent }));
+  };
+
 
   if (!isOpen) return null;
 
@@ -111,13 +121,11 @@ export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProp
             </div>
 
             {/* Rich Text Editor Placeholder */}
-            <div className="rounded-[15px] border border-[#2C2A29]/20 bg-gray-100 p-4">
-              <div className="text-sm text-gray-600 mb-2">Editor Toolbar (Placeholder)</div>
-              <div className="h-40 border rounded bg-white p-2 text-gray-400 flex items-center justify-center">
-                Rich text editor here
-              </div>
-              <div className="text-xs text-gray-400 mt-1">0 words</div>
-            </div>
+             
+                     <RichTextEditor
+                       content={postData.richContent}
+                       onChange={handleRichContentChange}
+                     />
                       {/* Upload Images */}
           <div className="mb-12 border border-[#A3A2A2] bg-white rounded-[25px] p-8 ">
             <div className="flex items-center justify-between">

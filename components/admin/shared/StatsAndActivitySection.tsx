@@ -7,6 +7,7 @@ import RecentUploadCard from "../cards/RecentUploadCard"
 import AddProductModal from "../modal/AddProductModal "
 import CreateSurveyModal from "../modal/CreateSurveyModal"
 import NewsletterModal from "../modal/NewsletterModal"
+import AddOutletModal from "../modal/AddOutletModal"
 
 
 export interface StatCardData {
@@ -48,7 +49,7 @@ export const StatsAndActivitySection = ({
   return (
     <>
       {/* Modal is now self-contained and handles its own overlay */}
-      {/* <AddProductModal
+      <AddOutletModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         titleModal={titleModal}
@@ -57,8 +58,8 @@ export const StatsAndActivitySection = ({
         toggleTag={toggleTag}
         setTitleModal={setTitleModal}
         setDescription={setDescription}
-      /> */}
-      <NewsletterModal  isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
+      />
+      {/* <NewsletterModal  isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/> */}
 
       {/* Stats and Activity Section */}
       <div className="flex flex-col justify-center items-start gap-[20px] w-full">
