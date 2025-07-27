@@ -15,7 +15,11 @@ interface PostData {
 
 export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
-    const [postData, setPostData] = useState<PostData>({richContent: ''});
+    const [postData, setPostData] = useState<PostData>({
+    
+richContent: '',
+      
+    });
 
   const [formData, setFormData] = useState({
     title: '',
@@ -58,7 +62,8 @@ export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProp
     console.log("Newsletter data:", formData);
     onClose();
   };
-    const handleRichContentChange = (richContent: string) => {
+
+  const handleRichContentChange = (richContent: string) => {
     setPostData(prev => ({ ...prev, richContent }));
   };
 

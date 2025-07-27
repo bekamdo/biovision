@@ -6,6 +6,7 @@ import { Plus, Search } from "lucide-react";
 import { useState } from "react";
 import { AddEventModal } from "@/components/admin/modal/AddEventModal";
 import Pagination from "@/components/admin/shared/Pagination";
+import { ShowEventModal } from "@/components/admin/modal/ShowEventModal";
 
 const EventsPage = () => {
   
@@ -81,6 +82,8 @@ const EventsPage = () => {
   ]
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isShowModalOpen, setShowIsModalOpen] = useState(false);
+
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -129,7 +132,9 @@ const EventsPage = () => {
                       July 18, 2025 | 10:00 AM EAT | Online via Zoom
                     </p>
                        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                      <button className="bg-white text-[#2e7d32] font-bold px-4 sm:px-6 lg:px-8 py-3 lg:py-4 rounded-full text-xs sm:text-sm hover:bg-gray-50 transition-colors whitespace-nowrap">
+                      <button
+                       onClick={() => setShowIsModalOpen(true)}
+                       className="bg-white text-[#2e7d32] font-bold px-4 sm:px-6 lg:px-8 py-3 lg:py-4 rounded-full text-xs sm:text-sm hover:bg-gray-50 transition-colors whitespace-nowrap">
                         View
                       </button>
                       
@@ -312,11 +317,15 @@ const EventsPage = () => {
           </div>
         </div>
       </div>
+    
           <Pagination/>
     </div>
+      <ShowEventModal isOpen={isShowModalOpen} onClose={() => setShowIsModalOpen(false)} />
     
     </>
   )
 }
 
 export default EventsPage;
+
+
