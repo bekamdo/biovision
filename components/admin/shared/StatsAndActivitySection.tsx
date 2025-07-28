@@ -73,7 +73,7 @@ export const StatsAndActivitySection = ({
       <div className="flex flex-col justify-center items-start gap-[20px] w-full">
         <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[20px]">
           {/* Stats Cards */}
-          <div className="flex flex-1 flex-col items-start gap-[20px] w-full">
+          <div className="flex flex-1 flex-col items-start gap-[10px] w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] w-full">
               {statCardsData.map((card, index) => (
                 <StatCard

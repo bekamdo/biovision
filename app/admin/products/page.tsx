@@ -16,19 +16,19 @@ const handleCloseModal = () => setIsModalOpen(false);
   const statCardsData = [
     {
       title: "Listed Products",
-      value: "78093",
+      value: "78,093",
       change: "+1292 past week",
       bgColor: "bg-[#FFFDF7]",
     },
     {
       title: "New Products",
-      value: "1292",
+      value: "1,292",
       change: "+10% from last week",
       bgColor: "bg-[#F8FFEF]",
     },
     {
       title: "Outlets",
-      value: "4592",
+      value: "4,592",
       change: "+ 0 this week",
       bgColor: "bg-[#DFF1FF]",
     },

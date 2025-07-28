@@ -17,21 +17,21 @@ const RecentUploadCard: React.FC<RecentUploadCardProps> = ({
 }) => {
   return (
     <div
-      className={`flex w-full lg:w-[506px] min-h-[136px] p-[20px] sm:p-[30px_50px] flex-col justify-center items-start gap-[10px] rounded-[10px] border border-[#2C2A29]/10 ${backgroundColor}`}
+      className={`flex flex-col justify-center items-start gap-2 p-[30px_50px] w-full lg:w-[506px] min-h-[136px] rounded-[10px] border border-[#2C2A29]/10 ${backgroundColor}`}
     >
-      <div className="flex flex-col items-start w-full gap-[10px]">
-        <div className=" text-[#2C2A29] font-helvetica text-[18px] sm:text-[20px] font-medium leading-[28px]">
-          {title}
-        </div>
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-[10px]">
-          <div className="text-[#2C2A29] font-helvetica text-[14px] font-normal leading-normal">
-            {subtitle}
-          </div>
-          <div
-            className={`text-white text-center font-helvetica text-[14px] font-medium leading-normal flex h-[38px] px-4 py-[10px] justify-center items-center gap-[10px] rounded-[20px] ${buttonColor} whitespace-nowrap`}
-          >
-            {buttonText}
-          </div>
+      <h3 className="text-[#2C2A29] font-helvetica text-[20px] font-medium leading-[28px]">
+        {title}
+      </h3>
+
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-2">
+        <p className="text-[#2C2A29] font-helvetica text-sm leading-normal">
+          {subtitle}
+        </p>
+
+        <div
+          className={`flex items-center justify-center h-[38px] px-4 py-2 rounded-[20px] text-white text-sm font-medium text-center font-helvetica whitespace-nowrap ${buttonColor}`}
+        >
+          {buttonText}
         </div>
       </div>
     </div>
