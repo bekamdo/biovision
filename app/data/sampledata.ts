@@ -274,12 +274,12 @@ export const tags = [
 
   
 export const userData = [
-    { name: "John Doe", role: "Admin" },
-    { name: "John Doe", role: "Moderator" },
-    { name: "John Doe", role: "Moderator" },
-    { name: "John Doe", role: "Moderator" },
-    { name: "John Doe", role: "Admin" },
-    { name: "John Doe", role: "Authenticated User" },
+    { name: "John Doe", userType:"Farmer",contactNumber:"+254 712 345 678",emailAddress:"Johndoe@gmail.com",role: "Admin" },
+    { name: "John Doe", userType:"Farmer",contactNumber:"+254 712 345 678",emailAddress:"Johndoe@gmail.com", role: "Moderator" },
+    { name: "John Doe", userType:"Farmer",contactNumber:"+254 712 345 678",emailAddress:"Johndoe@gmail.com", role: "Moderator" },
+    { name: "John Doe", userType:"Farmer",contactNumber:"+254 712 345 678",emailAddress:"Johndoe@gmail.com", role: "Moderator" },
+    { name: "John Doe", userType:"Farmer",contactNumber:"+254 712 345 678",emailAddress:"Johndoe@gmail.com", role: "Admin" },
+    { name: "John Doe", userType:"Farmer",contactNumber:"+254 712 345 678",emailAddress:"Johndoe@gmail.com", role: "Authenticated User" },
   ];
 
    export  const superAdminPermissions = [

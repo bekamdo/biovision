@@ -74,7 +74,7 @@ export const StatsAndActivitySection = ({
         <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-[20px]">
           {/* Stats Cards */}
           <div className="flex flex-1 flex-col items-start gap-[10px] w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[10px] w-full">
               {statCardsData.map((card, index) => (
                 <StatCard
                   key={index}
@@ -102,8 +102,8 @@ export const StatsAndActivitySection = ({
           </div>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-[15px] w-full sm:w-auto">
             {/* Search Bar */}
-            <div className="flex w-full sm:w-[280px] lg:w-[355px] h-[48px] p-[20px_10px] items-center gap-[10px] rounded-[8px] border border-gray-300 bg-white">
-              <Search className="w-[19px] h-[19px] text-gray-400" />
+            <div className="flex w-full lg:w-[355px] h-[48px] p-[20px_10px] items-center gap-[10px] rounded-[8px] border border-gray-300 bg-white">
+              <Search className="w-[19px]  h-[19px] text-gray-400" />
               <div className="text-gray-400 font-helvetica text-[14px] font-normal leading-normal">Search...</div>
             </div>
             {/* Add Button */}

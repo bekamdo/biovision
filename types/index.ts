@@ -189,3 +189,26 @@ export interface User {
   role: string;
   avatar: string;
 }
+export interface Permission {
+  view: boolean;
+  create: boolean;
+  edit: boolean;
+  delete: boolean;
+}
+
+export interface Role {
+  id: string;
+  name: string;
+  icon: string;
+}
+
+export interface Module {
+  id: string;
+  name: string;
+  permissions: Record<string, Permission>;
+}
+
+export interface PermissionsData {
+  modules: Module[];
+  roles: Role[];
+}

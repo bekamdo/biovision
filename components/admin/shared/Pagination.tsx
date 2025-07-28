@@ -5,7 +5,7 @@ const Pagination = () => {
   return (
       
       <div className="flex justify-center items-center gap-2 self-stretch mt-4">
-        <ChevronLeft className="w-5 h-5 text-gray-400" />
+        <ChevronLeft className="w-8 h-8  rounded-[50%] cursor-pointer text-sm text-gray-400 bg-white" />
         <div className="flex items-center gap-1">
           {[1, 2, 3, 4, 5].map((page) => (
             <div
@@ -22,7 +22,7 @@ const Pagination = () => {
           <span className="text-gray-400">...</span>
           <div className="w-8 h-8 flex items-center justify-center text-gray-500 text-sm font-medium">10</div>
         </div>
-        <ChevronRight className="w-5 h-5 text-gray-400" />
+        <ChevronRight className="w-8 h-8 bg-white cursor-pointer rounded-[50%] text-gray-400" />
       </div>
   )
 }
