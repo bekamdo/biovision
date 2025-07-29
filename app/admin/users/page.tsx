@@ -32,11 +32,11 @@ export default function UserManagement() {
       <div className="flex  flex-col sm:flex-row w-full justify-end items-center gap-[18px] sm:w-[377px] ml-auto">
         <div className="flex w-full sm:w-[209px] px-[10px] py-2 items-center gap-[10px] rounded-[15px] border border-design-gray-light bg-transparent">
           <SearchIcon />
-          <input 
-            type="text" 
-            placeholder="Search..." 
-            className="text-design-gray-light font-inter text-sm bg-transparent py-2 border-none outline-none flex-1"
-          />
+             <input
+                 type="text"
+                 placeholder="Search..."
+                 className="flex-grow bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400"
+                />
         </div>
         <button className="flex p-[11px] items-center rounded-[50px]  bg-dashboard-green cursor-pointer hover:bg-dashboard-green-light transition-colors">
           <FilterIcon />

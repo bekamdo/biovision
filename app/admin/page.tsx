@@ -135,17 +135,26 @@ export default function Index() {
               All Resources
             </div>
           </div>
+     
+       
+
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto">
-            <div className="flex w-full sm:w-[300px] md:w-[355px] h-12 px-2.5 py-5 items-center gap-2.5 rounded-lg border border-gray-300 bg-white">
+            {/* Search Input */}
+            <div className="flex w-full sm:w-[300px] md:w-[355px] h-12 px-2.5 items-center gap-2.5 rounded-lg border border-gray-300 bg-white">
               <Search className="w-6 h-6 flex-shrink-0 text-gray-400" />
-              <div className="text-gray-400 text-sm font-normal leading-normal">
-                Search...
-              </div>
+                <input
+                 type="text"
+                 placeholder="Search..."
+                 className="flex-grow bg-transparent outline-none text-gray-700 text-sm placeholder-gray-400"
+                />
             </div>
-            <div className="flex w-12 h-12 px-3 py-3 justify-center items-center rounded-[50px] bg-dashboard-green flex-shrink-0">
-              <Filter className="w-5 h-5 flex-shrink-0 text-white" />
-            </div>
-          </div>
+
+  {/* Filter Button */}
+  <div className="flex w-12 h-12 px-3 py-3 justify-center items-center rounded-[50px] bg-dashboard-green flex-shrink-0 cursor-pointer">
+    <Filter className="w-5 h-5 flex-shrink-0 text-white" />
+  </div>
+</div>
+
         </div>
 
        
