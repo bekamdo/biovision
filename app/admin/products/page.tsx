@@ -47,7 +47,7 @@ const handleCloseModal = () => setIsModalOpen(false);
         title="All Products"
         statCardsData={statCardsData}
         recentUploadCardData={recentUploadCardData}
-        onAddClick={handleOpenModal}
+        defaultModalType="addProduct"
       />
 
       {/* Products Grid */}

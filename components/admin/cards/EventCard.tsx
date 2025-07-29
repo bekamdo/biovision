@@ -7,6 +7,7 @@ interface EventCardProps {
   title: string
   description: string
   dateLocation: string
+  onViewClick?: () => void 
   showPublishButton?: boolean
 }
 
@@ -17,6 +18,7 @@ export default function EventCard({
   description,
   dateLocation,
   showPublishButton = false,
+  onViewClick
 }: EventCardProps) {
   return (
     <div className="rounded-[20px] overflow-hidden relative group">
@@ -39,7 +41,7 @@ export default function EventCard({
             <p className="text-xs mb-4 lg:mb-5 drop-shadow-[0px_4px_30px_rgba(0,0,0,1)] break-words">{dateLocation}</p>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
               <Link href="#" passHref>
-                <button className="bg-white text-[#2e7d32]  font-bold px-4 sm:px-6 lg:px-8 py-3 lg:py-4 rounded-full text-xs sm:text-sm hover:bg-gray-50 transition-colors whitespace-nowrap">
+                <button onClick={onViewClick} className="bg-white text-[#2e7d32]  font-bold px-4 sm:px-6 lg:px-8 py-3 lg:py-4 rounded-full text-xs sm:text-sm hover:bg-gray-50 transition-colors whitespace-nowrap">
                   View
                 </button>
               </Link>

@@ -2,13 +2,23 @@
 
 import React, { useRef, useEffect } from "react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 interface ShowEventModalProps {
   isOpen: boolean;
   onClose: () => void;
+  event ?: {
+    title: string;
+    image: string;
+    category: string;
+    date: string;
+    summary: string;
+    learn: string[];
+  } | null;
 }
 
-export const ShowEventModal: React.FC<ShowEventModalProps> = ({ isOpen, onClose }) => {
+
+export const ShowEventModal: React.FC<ShowEventModalProps> = ({ isOpen, onClose,event }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -73,16 +83,18 @@ export const ShowEventModal: React.FC<ShowEventModalProps> = ({ isOpen, onClose 
           {/* Modal Content */}
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold">
+             
               Organic Soil Health & Composting Workshop – Karen, Nairobi
+              
             </h2>
-
-            <div className="h-[318px] w-[523px] rounded-2xl mx-auto overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=300&fit=crop"
-                alt="Hands holding soil"
-                className="w-full h-full object-cover"
-              />
-            </div>
+             <div className="h-[318px] w-full max-w-[523px] relative rounded-2xl mx-auto overflow-hidden">
+                 <Image
+                    fill
+                    src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=300&fit=crop"
+                    alt="Hands holding soil"
+                    className="object-cover"
+                    />
+              </div>
 
             <div className="space-y-1 text-xl bold text-[#2C2A29]">
               <div><strong>Category:</strong> Training Workshop</div>

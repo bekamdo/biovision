@@ -123,7 +123,7 @@ export default function CreateSurveyModal({ isOpen, onClose }: CreateSurveyModal
                 type="checkbox"
                 checked={isAnonymous}
                 onChange={(e) => setIsAnonymous(e.target.checked)}
-                className="w-5 h-5 text-green-600 border-gray-300 rounded focus:ring-green-500 focus:ring-2"
+                className="w-5 h-5 accent-dashboard-green text-dashboard-green border-gray-300 rounded focus:ring-dashboard-green focus:ring-1"
               />
               <span className="text-[#2C2A29] text-md">Make Survey Anonymous</span>
             </div>

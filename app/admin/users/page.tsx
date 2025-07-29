@@ -1,7 +1,6 @@
 import { editorPermissions, superAdminPermissions, userData, userPermissions } from "@/app/data/sampledata";
 import { FilterIcon } from "@/components/admin/icon/FilterIcon";
 import { SearchIcon } from "@/components/admin/icon/SearchIcon";
-import { RoleSection } from "@/components/admin/RoleSection";
 import Pagination from "@/components/admin/shared/Pagination";
 import { PermissionsTable } from "@/components/admin/table/PermissionsTable";
 import { UserRow } from "@/components/admin/UserRow";
@@ -30,16 +29,16 @@ export default function UserManagement() {
       </div>
 
       {/* Search and Filter Section */}
-      <div className="flex flex-col sm:flex-row justify-end items-center gap-[18px] w-full sm:w-[277px] ml-auto">
+      <div className="flex  flex-col sm:flex-row w-full justify-end items-center gap-[18px] sm:w-[377px] ml-auto">
         <div className="flex w-full sm:w-[209px] px-[10px] py-2 items-center gap-[10px] rounded-[15px] border border-design-gray-light bg-transparent">
           <SearchIcon />
           <input 
             type="text" 
             placeholder="Search..." 
-            className="text-design-gray-light font-inter text-sm bg-transparent border-none outline-none flex-1"
+            className="text-design-gray-light font-inter text-sm bg-transparent py-2 border-none outline-none flex-1"
           />
         </div>
-        <button className="flex p-[11px] items-center rounded-[50px] bg-dashboard-green cursor-pointer hover:bg-dashboard-green-light transition-colors">
+        <button className="flex p-[11px] items-center rounded-[50px]  bg-dashboard-green cursor-pointer hover:bg-dashboard-green-light transition-colors">
           <FilterIcon />
         </button>
       </div>

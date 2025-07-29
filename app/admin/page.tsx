@@ -28,7 +28,7 @@ export default function Index() {
         
 
         {/* Analytics Section */}
-      <div className="flex flex-col sm:flex-row items-end sm:items-center sm:px-6 lg:px-8 w-full">
+      <div className="flex flex-col sm:flex-row items-end sm:items-center sm:px-4 lg:px-5 w-full">
         <div className="flex w-full items-center">
            <div className="text-dashboard-text text-lg sm:text-xl md:text-2xl font-bold leading-snug sm:leading-9">
               Analytics
@@ -47,7 +47,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row justify-between items-start self-stretch gap-5">
+        <div className="flex flex-col xl:flex-row justify-between items-start self-stretch gap-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full xl:w-[729px]">
             {/* Recently Uploaded */}
             <div className="w-full h-[439px] flex-shrink-0 relative">

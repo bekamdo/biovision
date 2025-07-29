@@ -110,7 +110,7 @@ const mockRestaurants: Restaurant[] = [
         title="All Outlets"
         statCardsData={statCardsData}
         recentUploadCardData={recentUploadCardData}
-        onAddClick={handleOpenModal}
+        defaultModalType="addOutlet"
       />
        <main className="min-h-screen bg-gray-50 p-4">
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-7">
