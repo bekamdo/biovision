@@ -49,12 +49,16 @@ export const ShowEventModal: React.FC<ShowEventModalProps> = ({ isOpen, onClose,
       <div className="fixed inset-0 bg-black/50 transition-opacity duration-300" />
 
       {/* Modal container */}
-      <div className="flex min-h-full items-center justify-center p-4 sm:p-6 lg:p-8">
+      <div className="flex   inset-0 fixed items-center justify-center p-6 sm:p-6 lg:p-8">
         <div
           ref={modalRef}
           className="relative w-full max-w-[709px] transform rounded-[50px] bg-white/90 backdrop-blur-[10px] p-8 transition-all duration-300 ease-in-out"
+           style={{
+            opacity: isOpen ? 1 : 0,
+            transform: isOpen ? 'scale(0.50)' : 'scale(0.45)'
+          }}
         >
-        <div className="max-w-[523px] flex flex-col container mx-auto">
+        <div className="max-w-[523px] h-[1375px] flex flex-col container mx-auto">
 
       
           {/* Back Button */}
@@ -84,7 +88,8 @@ export const ShowEventModal: React.FC<ShowEventModalProps> = ({ isOpen, onClose,
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold">
              
-              Organic Soil Health & Composting Workshop – Karen, Nairobi
+              {/* Organic Soil Health & Composting Workshop – Karen, Nairobi */}
+              {event?.title}
               
             </h2>
              <div className="h-[318px] w-full max-w-[523px] relative rounded-2xl mx-auto overflow-hidden">
@@ -119,12 +124,28 @@ export const ShowEventModal: React.FC<ShowEventModalProps> = ({ isOpen, onClose,
                 <li>AFECOA certification info</li>
               </ul>
             </div>
+              <div>
+              <h3 className="space-y-1 text-xl bold text-[#2C2A29] mb-3">Who Should Attend</h3>
+              <ul className="list-disc list-inside text-[#2C2A29] space-y-1">
+                <li>Smallholder farmers and gardeners</li>
+                <li>AE/EOA practitioners  and advocates</li>
+                <li>Community group leaders</li>
+                <li>Agricultural extension workers</li>
+                <li>Students in enviromental/agricultural fields</li>
+              </ul>
+            </div>
+                <div>
+              <h3 className="space-y-1 text-xl bold text-[#2C2A29] mb-3">Why it Matters</h3>
+              <p className="list-disc list-inside text-[#2C2A29] space-y-1">
+               Healthy soil is the foundation of agroecology. This workshop helps euip farmers with simple, cost-effective methods to regenerate degraded soils and reduce dependency on synthetic inputs.
+              </p>
+            </div>
 
             <div className="flex justify-center gap-4 pt-4">
-              <Button className="bg-green-600 cursor-pointer hover:bg-green-700 text-white px-10 py-4 rounded-full">
+              <Button className="bg-[#2E7D32] cursor-pointer hover:bg-green-700 text-[#FDFBF6] px-20 py-8 rounded-full">
                 Publish
               </Button>
-              <Button variant="destructive" className="bg-red-500 cursor-pointer hover:bg-red-600 text-white px-10 py-4 rounded-full">
+              <Button variant="destructive" className="bg-[#DC3F27] cursor-pointer hover:bg-red-600 text-[#FDFBF6] px-20 py-8 rounded-full">
                 Delete
               </Button>
             </div>

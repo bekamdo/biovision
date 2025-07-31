@@ -26,12 +26,13 @@ const ProductCard = ({ product }: { product: Product }) => (
       </div>
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-[10px] w-full">
         <div className="text-[#2C2A29] font-helvetica text-[16px]">By {product.seller}</div>
-        <div className="flex items-center gap-[4px]">
+        {/* removed the products from reviews */}
+        {/* <div className="flex items-center gap-[4px]">
           <div className="flex h-[20px] items-center gap-[2px]">
             {[...Array(5)].map((_, i) => <StarIcon key={i} filled={i < product.rating} />)}
           </div>
           <div className="text-[#2C2A29] font-helvetica text-[12px] font-medium">({product.reviews})</div>
-        </div>
+        </div> */}
       </div>
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-[10px] w-full">
         <div className="flex items-center gap-[5px]">

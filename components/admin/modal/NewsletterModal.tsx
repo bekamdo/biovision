@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { RichTextEditor } from "../contentModalComp/RichTextEditor";
 
+
 interface NewsletterModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -20,6 +21,7 @@ export default function NewsletterModal({ isOpen, onClose }: NewsletterModalProp
 richContent: '',
       
     });
+
 
   const [formData, setFormData] = useState({
     title: '',
@@ -38,24 +40,31 @@ richContent: '',
       document.addEventListener("mousedown", handleClickOutside);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
+  
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = '';
     };
   }, [isOpen, onClose]);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+  const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  const { name, value, type } = e.target;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value
-    }));
-  };
+  const parsedValue =
+    type === "radio" && name === "isAnonymous" ? value === "true" : value;
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: parsedValue,
+  }));
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,10 +83,15 @@ richContent: '',
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="fixed inset-0 bg-black/50 transition-opacity duration-300 ease-in-out"></div>
 
-      <div className="flex min-h-full items-center justify-center p-4 sm:p-6 lg:p-8">
+      <div className="flex fixed inset-0 max-w-[1108px] mx-auto items-center justify-center p-4 sm:p-6 lg:p-8">
         <div
           ref={modalRef}
-          className="relative w-full max-w-3xl transform rounded-[50px] bg-white/90 backdrop-blur-[10px] p-6 sm:p-8 lg:p-12 transition-all duration-300 ease-in-out"
+          className="relative  max-w-[1008px]  transform rounded-[50px] bg-white/90 backdrop-blur-[10px] p-8 sm:p-8 lg:p-12 transition-all duration-300 ease-in-out"
+           style={{
+            opacity: isOpen ? 1 : 0,
+            transform: isOpen ? 'scale(0.55)' : 'scale(0.495)'
+          }}
+          
         >
           {/* Back Button */}
           <div className="flex items-start gap-12 mb-5">
@@ -207,19 +221,24 @@ richContent: '',
           </div>
 
             {/* Anonymous Checkbox */}
-            <div className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                name="isAnonymous"
-                checked={formData.isAnonymous}
-                onChange={handleChange}
-                className="w-5 h-5 border border-[#2C2A29]/40 rounded focus:ring-2 focus:ring-[#2E7D32]"
-              />
-              <label htmlFor="isAnonymous" className="text-[#2C2A29] text-sm">
-                Make Anonymous
-              </label>
-            </div>
-
+         <div className="flex items-center gap-2">
+  <input
+    type="radio"
+    name="isAnonymous"
+    id="isAnonymous"
+    value="true"
+    checked={formData.isAnonymous}
+    onChange={handleChange}
+    className="w-5 h-5 border border-[#2C2A29]/40 rounded-[50%] focus:ring-2 focus:ring-[#2E7D32]"
+  />
+  <label
+    htmlFor="isAnonymous"
+    className="text-[#2C2A29] text-sm cursor-pointer"
+  >
+    Make Anonymous
+  </label>
+</div>
+    
             {/* Submit Button */}
             <div className="flex justify-center pt-6">
               <button

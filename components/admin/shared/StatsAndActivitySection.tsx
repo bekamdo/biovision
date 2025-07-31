@@ -19,6 +19,19 @@ export interface StatCardData {
   bgColor: string
 }
 
+interface ShowEventModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  event?: {
+    title: string;
+    image: string;
+    category: string;
+    date: string;
+    summary: string;
+    learn: string[];
+  } | null;
+}
+
 export interface RecentUploadCardData {
   title: string
   subtitle: string
@@ -48,6 +61,7 @@ export const StatsAndActivitySection = ({
   const [selectedTags, setSelectedTags] = useState<string[]>(["Low fat"])
   const [titleModal, setTitleModal] = useState("")
   const [description, setDescription] = useState("")
+  const [selectedEvent, setSelectedEvent] = useState<ShowEventModalProps["event"]>(null);
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
@@ -103,7 +117,11 @@ export const StatsAndActivitySection = ({
       />
     ),
     showEvent: (
-      <ShowEventModal isOpen onClose={() => setModalType(null)} />
+   <ShowEventModal
+    isOpen
+    onClose={() => setModalType(null)}
+    event={selectedEvent}
+     />
     ),
     addEvent:(
       <AddEventModal isOpen onClose={() => setModalType(null)}/>

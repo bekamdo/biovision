@@ -9,12 +9,16 @@ import { ReactNode } from "react";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
  
-    <>
+ 
+   <>
+       
     <SidebarShell>
       {children}
     </SidebarShell> 
-     <Footer/>
-     </>
+    <Footer/>
+   </>
+   
+  
     
   
   )

@@ -1,15 +1,21 @@
+"use client"
+
 // components/admin/shared/SidebarShell.tsx
+import { useState } from "react";
+
+
+import MainNav from "@/components/admin/main-nav";
 import { Sidebar } from "./SideBar";
 import { SidebarToggle } from "./SidebarToggle";
-import MainNav from "@/components/admin/main-nav";
-import Footer from "@/components/footer";
+
 
 export function SidebarShell({ children }: { children: React.ReactNode }) {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   return (
     <>
     <div className="min-h-screen bg-app-bg font-helvetica flex">
       {/* Desktop Sidebar */}
-      <Sidebar />
+         <Sidebar/>
 
       {/* Main Content */}
       <div className="flex-1 flex-col">

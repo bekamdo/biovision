@@ -188,13 +188,14 @@ export const FileUpload: React.FC<FileUploadProps> = ({ onFileUpload }) => {
                   />
                 </button>
               </div>
-              {/* Progress bar */}
+              Progress bar
               <div className="w-full mt-[25px] bg-gray-200 rounded-full h-2 max-md:mt-4">
                 <div 
                   className="bg-[rgba(46,125,50,1)] h-2 rounded-full transition-all duration-300"
                   style={{ width: `${file.progress}%` }}
                 />
               </div>
+              
             </div>
           ))}
         </div>

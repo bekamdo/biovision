@@ -199,10 +199,7 @@ export default function ContentPage() {
             </div>
 
         <Pagination/>
-        <CreateContentModal 
-  isOpen={isCreateContentModalOpen}
-  onClose={() => setIsCreateContentModalOpen(false)}
-/>
+        <CreateContentModal isOpen={isCreateContentModalOpen} onClose={() => setIsCreateContentModalOpen(false)} />
 
     
        

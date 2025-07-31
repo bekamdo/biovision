@@ -46,6 +46,7 @@ export default function AddProductModal ({
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+       document.body.style.overflow = '';
     };
   }, [isOpen, onClose]);
 
@@ -61,20 +62,20 @@ export default function AddProductModal ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
+    <div className="fixed inset-0 z-50">
       
       {/* Background overlay */}
-      <div className="fixed inset-0 bg-black/50 transition-opacity duration-300 ease-in-out"></div>
+      <div className="fixed inset-0  bg-black/50 transition-opacity duration-300 ease-in-out"></div>
 
       {/* Modal container */}
-      <div className="flex min-h-full items-center justify-center p-4 sm:p-6 lg:p-8">
+      <div className=" fixed flex inset-0 items-center justify-center p-4 sm:p-6 lg:p-8">
         {/* Modal content */}
         <div
           ref={modalRef}
-          className="relative w-full max-w-4xl transform rounded-[50px] bg-white/90 backdrop-blur-[10px] p-6 sm:p-8 lg:p-12 transition-all duration-300 ease-in-out"
+          className="relative w-full max-w-[1108px] transform rounded-[50px] bg-white/90 backdrop-blur-[10px] p-6 sm:p-8 lg:p-12 transition-all duration-300 ease-in-out"
           style={{
             opacity: isOpen ? 1 : 0,
-            transform: isOpen ? 'scale(1)' : 'scale(0.95)'
+            transform: isOpen ? 'scale(0.6)' : 'scale(0.54)'
           }}
         >
           {/* Back Button */}
@@ -100,7 +101,7 @@ export default function AddProductModal ({
           </div>
 
           {/* Header */}
-          <div className="flex flex-col items-center gap-2.5 mb-5">
+          <div className="flex flex-col items-start gap-2.5 mb-5">
             <h1 className="text-[#2C2A29] text-2xl sm:text-3xl font-bold leading-normal tracking-[-0.96px] text-center">
               Add Product
             </h1>

@@ -8,6 +8,8 @@ import { AddEventModal } from "@/components/admin/modal/AddEventModal"
 import { ShowEventModal } from "@/components/admin/modal/ShowEventModal"
 import Pagination from "@/components/admin/shared/Pagination"
 import EventCard from "@/components/admin/cards/EventCard" // ✅ your reusable component
+import ResponsiveArticleTable from "@/components/admin/table/ResponsiveArticleTable"
+import { sampleArticles } from "@/app/data/sampledata"
 
 const EventsPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -17,7 +19,7 @@ const EventsPage = () => {
     const handleViewEvent = (eventData: any) => {
     setSelectedEvent(eventData)
     setShowIsModalOpen(true)
-    ShowEventModal(eventData);
+   
   }
 
   const statCardsData = [
@@ -86,7 +88,7 @@ const EventsPage = () => {
   return (
     <>
       <AddEventModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <ShowEventModal isOpen={isShowModalOpen} onClose={() => setShowIsModalOpen(false)}  />
+      <ShowEventModal isOpen={isShowModalOpen} onClose={() => setShowIsModalOpen(false)} event={selectedEvent}  />
 
       <div className="flex flex-col items-start gap-[20px] p-4 sm:p-[20px] bg-[#F8F9FA] min-h-screen w-full max-w-[1277px] mx-auto">
         <Header title="Events Management" description="Create and manage all events" />
@@ -98,8 +100,12 @@ const EventsPage = () => {
           defaultModalType="addEvent"
         />
 
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                 <ResponsiveArticleTable articles={sampleArticles} />
+              </div>
+
         {/* All Events */}
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
               {allEvents.map((event, index) => (
@@ -111,10 +117,10 @@ const EventsPage = () => {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Pending Approval Section */}
-          <div>
+          {/* <div>
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-5">
               <h2 className="text-2xl font-medium text-events-text">Pending Approval</h2>
               <div className="flex items-center gap-4 w-full sm:w-auto">
@@ -146,7 +152,7 @@ const EventsPage = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Pagination */}
         <div className="mt-10 w-full flex justify-center">
